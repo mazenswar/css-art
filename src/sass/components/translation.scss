@@ -1,0 +1,66 @@
+$lan-one-color: #871414;
+$lan-two-color: #466db4;
+.translation-container {
+	// position: relative;
+	background-color: aquamarine;
+	width: 80vw;
+	height: 80vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.lan-one,
+	.lan-two {
+		height: 200px;
+		width: 350px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: 1s ease-in-out;
+		border-radius: 10px;
+	}
+
+	.lan-one {
+		background-color: $lan-one-color;
+		position: relative;
+		left: 30px;
+		top: 30px;
+		&:before {
+			content: "";
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			border-left: 24px solid $lan-one-color;
+			border-right: 12px solid transparent;
+			border-top: 12px solid $lan-one-color;
+			border-bottom: 20px solid transparent;
+			left: 32px;
+			bottom: -24px;
+		}
+	}
+	.lan-two {
+		background-color: $lan-two-color;
+		position: relative;
+		right: 0;
+		&:before {
+			content: "";
+			width: 0px;
+			height: 0px;
+			position: absolute;
+			border-left: 24px solid $lan-two-color;
+			border-right: 12px solid transparent;
+			border-top: 12px solid $lan-two-color;
+			border-bottom: 20px solid transparent;
+			left: 32px;
+			bottom: -24px;
+		}
+	}
+	&:hover {
+		.lan-one {
+			left: 320px;
+		}
+		.lan-two {
+			right: 320px;
+		}
+	}
+}
