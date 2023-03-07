@@ -1,3 +1,16 @@
+.pencil-container {
+	width: 80vw;
+	height: 90vh;
+	background-color: red;
+	display: flex;
+	justify-content: center;
+	transition: 1s ease-in-out;
+	&:hover {
+		.pencil {
+			transform: rotate(290deg);
+		}
+	}
+}
 .pencil {
 	height: 370px;
 	width: 90px;
@@ -26,7 +39,4 @@
 		}
 	}
 	transition: 1s ease-in-out;
-	&:hover {
-		transform: rotate(290deg);
-	}
 }

@@ -1,2 +1,8 @@
 @forward "pencil";
 @forward "translation";
+@forward "drawing";
+@forward "contact";
+.App {
+	display: flex;
+	flex-direction: column;
+}
